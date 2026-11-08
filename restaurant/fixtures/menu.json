@@ -1,0 +1,7 @@
+[
+  {"model": "restaurant.menu", "pk": 1, "fields": {"title": "Greek Salad", "price": "12.99", "inventory": 25}},
+  {"model": "restaurant.menu", "pk": 2, "fields": {"title": "Bruschetta", "price": "7.99", "inventory": 30}},
+  {"model": "restaurant.menu", "pk": 3, "fields": {"title": "Grilled Fish", "price": "20.00", "inventory": 15}},
+  {"model": "restaurant.menu", "pk": 4, "fields": {"title": "Pasta", "price": "18.50", "inventory": 20}},
+  {"model": "restaurant.menu", "pk": 5, "fields": {"title": "Lemon Dessert", "price": "6.50", "inventory": 40}}
+]

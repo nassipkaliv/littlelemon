@@ -1,0 +1,65 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Lemon</title>
+  <link rel="stylesheet" href="{% static 'restaurant/css/style.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{% url 'home' %}">Little Lemon</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#api">API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Little Lemon</h1>
+        <p class="location">Chicago</p>
+        <p>A family-owned Mediterranean restaurant serving traditional recipes with a modern twist.</p>
+        <a class="button" href="#api">Reserve through the API</a>
+      </div>
+    </section>
+
+    <section id="about" class="wrap section">
+      <h2>About us</h2>
+      <p>Little Lemon is a neighbourhood bistro where recipes passed down through the family meet fresh, seasonal ingredients.</p>
+    </section>
+
+    <section id="menu" class="wrap section">
+      <h2>From our kitchen</h2>
+      <ul class="dishes">
+        <li><h3>Greek Salad</h3><p>Crispy lettuce, peppers, olives and feta.</p></li>
+        <li><h3>Bruschetta</h3><p>Grilled bread with garlic, salt and olive oil.</p></li>
+        <li><h3>Lemon Dessert</h3><p>Made from a recipe straight from grandma.</p></li>
+      </ul>
+    </section>
+
+    <section id="api" class="wrap section">
+      <h2>API</h2>
+      <table>
+        <thead><tr><th>Path</th><th>Methods</th><th>Access</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/api/menu/">/api/menu/</a></td><td>GET, POST</td><td>GET is public, POST needs a token</td></tr>
+          <tr><td>/api/menu/&lt;id&gt;/</td><td>GET, PUT, PATCH, DELETE</td><td>GET is public, the rest need a token</td></tr>
+          <tr><td>/api/bookings/</td><td>GET, POST</td><td>Token</td></tr>
+          <tr><td>/api/bookings/&lt;id&gt;/</td><td>GET, PUT, PATCH, DELETE</td><td>Token</td></tr>
+          <tr><td>/auth/users/</td><td>POST</td><td>Public registration</td></tr>
+          <tr><td>/auth/token/login/</td><td>POST</td><td>Returns a token</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Little Lemon, Chicago</div>
+  </footer>
+</body>
+</html>

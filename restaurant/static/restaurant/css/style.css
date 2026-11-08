@@ -1,0 +1,122 @@
+:root {
+  --green: #495e57;
+  --yellow: #f4ce14;
+  --ink: #333;
+  --paper: #fff;
+  --soft: #edefee;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, nav, table, .brand, .button {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  color: var(--green);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 16px;
+  color: var(--green);
+}
+
+nav a:first-child { margin-left: 0; }
+
+.hero {
+  padding: 56px 0;
+  color: var(--paper);
+  background: var(--green);
+}
+
+.hero h1 {
+  margin: 0;
+  color: var(--yellow);
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.location {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--yellow);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section { padding-top: 40px; padding-bottom: 16px; }
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.dishes li {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.dishes h3 { margin: 0 0 4px; color: var(--green); }
+.dishes p { margin: 0; }
+
+#api { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid var(--soft);
+  text-align: left;
+}
+
+th { color: var(--green); }
+
+.site-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  color: var(--paper);
+  background: var(--green);
+}
